@@ -15,6 +15,5 @@ COPY --from=build-dev /go/bin/jsonargs /go/bin/jsonargs
 COPY --from=build-dev /go/bin/feed2json /go/bin/feed2json
 COPY --from=build-dev /go/bin/ocinosql-dedup /go/bin/ocinosql-dedup
 COPY --chmod=755 --from=build-dev /app/job.sh /job.sh
-COPY --chmod=755 --from=build-dev /app/algia_post.sh /algia_post.sh
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["/job.sh"]
