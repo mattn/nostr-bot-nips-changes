@@ -6,7 +6,7 @@ RUN CGO_ENABLED=0 GOBIN=/go/bin go install -buildvcs=false -trimpath -ldflags '-
 RUN CGO_ENABLED=0 GOBIN=/go/bin go install -buildvcs=false -trimpath -ldflags '-w -s' github.com/mattn/jsonargs@latest
 RUN CGO_ENABLED=0 GOBIN=/go/bin go install -buildvcs=false -trimpath -ldflags '-w -s' github.com/mattn/ocinosql-dedup@latest
 RUN CGO_ENABLED=0 GOBIN=/go/bin go install -buildvcs=false -trimpath -ldflags '-w -s' github.com/carlmjohnson/feed2json/cmd/feed2json@latest
-FROM debian:buster-slim AS stage
+FROM debian:bookworm-slim AS stage
 RUN apt update
 RUN apt install -y curl jq
 RUN apt clean all
