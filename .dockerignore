@@ -1,2 +1,6 @@
 *.yaml
-*.sh
+run.sh
+setenv.sh
+setup.sh
+test.sh
+update.sh
